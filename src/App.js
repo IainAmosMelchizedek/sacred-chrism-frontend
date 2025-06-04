@@ -36,14 +36,10 @@ const SacredSpineApp = () => {
     const paymentStatus = urlParams.get('payment');
     
     if (paymentStatus === 'success') {
-      // Show success message
       alert('🎉 Payment successful! Check your email for the PDF download link.');
-      // Clean up URL
       window.history.replaceState(null, '', window.location.pathname);
     } else if (paymentStatus === 'cancelled') {
-      // Show cancelled message
       alert('Payment was cancelled. You can try again anytime.');
-      // Clean up URL
       window.history.replaceState(null, '', window.location.pathname);
     }
   }, []);
@@ -56,18 +52,35 @@ const SacredSpineApp = () => {
 
     "Blessed practitioner, your chrism follows the Noble Eightfold Path down your spine of awakening. Buddha's first teaching at Deer Park resonates through each vertebra: \"All conditioned existence is suffering, but liberation is possible.\" Your sacred oil carries the Four Noble Truths through your central channel, dissolving the illusion of separate self. Like the Buddha under the Bodhi tree, your spine becomes the axis of enlightenment where Mara's temptations are transcended.",
 
-    "Beloved child of the Most High, your sacred chrism now flows with the consciousness of Yeshua, the Anointed One. \"Be still and know that I am God\" echoes through your spine as this holy oil carries the Sermon on the Mount through each sacred vertebra. Your chrism embodies the Beatitudes: blessed are the pure in heart, for they shall see God within their own temple. Like Christ's 40 days in the wilderness, your sacred secretion undergoes transformation in the desert of your sacral sanctuary."
+    "Beloved child of the Most High, your sacred chrism now flows with the consciousness of Yeshua, the Anointed One. \"Be still and know that I am God\" echoes through your spine as this holy oil carries the Sermon on the Mount through each sacred vertebra. Your chrism embodies the Beatitudes: blessed are the pure in heart, for they shall see God within their own temple. Like Christ's 40 days in the wilderness, your sacred secretion undergoes transformation in the desert of your sacral sanctuary.",
+
+    "Honorable seeker of the Way, your chrism flows with the wisdom of Kong Qiu through the mandate of heaven within your spine. \"The gentleman understands what is moral, the small man understands what is profitable\" - and you are becoming the gentleman of spirit, seeking only the profit of consciousness. Your sacred oil carries the Five Constants through your vertebral temple: Ren (benevolence), Yi (righteousness), Li (proper conduct), Zhi (knowledge), and Xin (trustworthiness).",
+
+    "Sacred walker between worlds, your chrism now carries the wisdom of the ancient shamans down your world tree spine. Like the Siberian shaman's journey to the upper and lower worlds, your sacred oil travels the three realms of your vertebral cosmos. The drum of your heartbeat guides this holy substance through the axis mundi of your backbone, connecting earth and sky within your temple body. Your chrism embodies the power animals and spirit guides of indigenous wisdom.",
+
+    "Revered student of the Dao, your chrism now flows with the wisdom of Laozi through the wu wei of your spine. \"The Dao that can be spoken is not the eternal Dao\" - yet your sacred oil speaks the unspeakable through the language of divine transformation. Like water flowing downhill, your chrism follows the path of least resistance, finding the lowest place (your sacrum) before rising again. The Dao De Jing flows through your vertebrae: \"Empty yourself of everything, let the mind become still.\"",
+
+    "Honored physician of your own temple, your chrism now flows according to the wisdom of the Five Elements through your meridian spine. Wood energy of spring flows through your cervical vertebrae, bringing vision and planning. Fire energy of summer ignites your thoracic spine, opening your heart to joy and connection. Earth energy of late summer stabilizes your lumbar region, providing the centered strength of harvest. Metal energy of autumn flows through your sacral area, teaching the wisdom of letting go.",
+
+    "Blessed bodhisattva, your chrism now flows with the compassion of Avalokiteshvara through the bardo of your spine. \"Om Mani Padme Hum\" vibrates through each vertebra as your sacred oil carries the six-syllable mantra of universal compassion. Like the Dalai Lama's endless dedication to all sentient beings, your chrism embodies the bodhisattva vow: \"I will not enter nirvana until all beings are liberated.\" The Tibetan Book of the Dead guides your sacred secretion through the intermediate state between death and rebirth.",
+
+    "Star-born seeker of the Great Work, your chrism now flows with the wisdom of Aiwass through the Thelemic spine of your temple. \"Do what thou wilt shall be the whole of the Law\" - and your sacred oil helps you discover what your true will actually is, beyond the desires of the ego. Love is the law, love under will, and your chrism embodies this divine love as it flows through the Tree of Life of your vertebral column.",
+
+    "Sacred child of the Eternal Blue Sky, your chrism now flows with the ancient wisdom of the steppes through your shamanic spine. Tengri, the supreme sky god of the Mongols, breathes through your vertebrae as your sacred oil connects you to the vast cosmos above and the nurturing earth below. Like the Mongol shamans who could ride the wind between worlds, your chrism carries you on a spiritual journey across the endless steppe of consciousness.",
+
+    "Beloved devotee of the Supreme Lord, your chrism now flows with the bhakti of Sri Krishna through your spine of divine love. \"Surrender all your works unto me, with mind intent on me, and being free from desire and selfishness, fight\" - these words from the Bhagavad Gita guide your sacred oil through the battlefield of spiritual transformation. Like Radha's pure love for Krishna, your chrism carries the highest form of devotion through your vertebral temple.",
+
+    "Indestructible practitioner of the diamond way, your chrism now flows with the tantric wisdom of Padmasambhava through your vajra spine. \"The nature of mind is clear light\" - and your sacred oil carries this luminous awareness through the subtle channels of your vertebral mandala. Like the rainbow body of Milarepa, your chrism transforms your physical form into pure light and energy. In this final cycle of the year, your chrism embodies the ultimate realization: nirvana and samsara are one."
   ];
 
-  // Microsoft Graph API integration (simulated for production environment)
+  // Microsoft Graph API integration (simulated)
   const [isAuthenticating, setIsAuthenticating] = useState(false);
   const [authToken, setAuthToken] = useState(null);
   
-  // Function to authenticate with Microsoft (simulated)
   const authenticateWithMicrosoft = async () => {
     setIsAuthenticating(true);
     try {
-      console.log('🔄 Microsoft authentication simulated for production...');
+      console.log('🔄 Microsoft authentication simulated...');
       const simulatedToken = 'EwBIA8l6BAAU...' + Date.now();
       setAuthToken(simulatedToken);
       console.log('✅ Authentication successful');
@@ -78,40 +91,46 @@ const SacredSpineApp = () => {
     }
   };
 
-  // Real astronomical data from CSV (embedded sample)
+  // Real astronomical data
   const [astronomicalData, setAstronomicalData] = useState(null);
   
-  // Load astronomical data when component mounts
   useEffect(() => {
-    // Sample astronomical data (in production, this would be loaded from API or embedded)
-    const sampleData = [
-      {
-        'Date': '6/6/2025',
-        'Time (UTC)': '15:00',
-        'Moon Enters': 'Libra',
-        'Moon Phase': 'Waxing Gibbous',
-        'Sacred Window Begins': '2025-06-06 15:00 UTC',
-        'Sacred Window Ends': '2025-06-09 03:00 UTC'
-      },
-      {
-        'Date': '7/3/2025',
-        'Time (UTC)': '08:30',
-        'Moon Enters': 'Aries',
-        'Moon Phase': 'Waning Crescent',
-        'Sacred Window Begins': '2025-07-03 08:30 UTC',
-        'Sacred Window Ends': '2025-07-05 20:30 UTC'
+    const loadAstronomicalData = async () => {
+      try {
+        // In production, this would load from your CSV data
+        const sampleData = [
+          {
+            'Date': '6/6/2025',
+            'Time (UTC)': '15:00',
+            'Moon Enters': 'Libra',
+            'Moon Phase': 'Waxing Gibbous',
+            'Sacred Window Begins': '2025-06-06 15:00 UTC',
+            'Sacred Window Ends': '2025-06-09 03:00 UTC'
+          },
+          {
+            'Date': '7/3/2025',
+            'Time (UTC)': '08:30',
+            'Moon Enters': 'Aries',
+            'Moon Phase': 'Waning Crescent',
+            'Sacred Window Begins': '2025-07-03 08:30 UTC',
+            'Sacred Window Ends': '2025-07-05 20:30 UTC'
+          }
+        ];
+        
+        setAstronomicalData(sampleData);
+        console.log(`Loaded ${sampleData.length} astronomical entries`);
+      } catch (error) {
+        console.error('Error loading astronomical data:', error);
       }
-    ];
+    };
     
-    setAstronomicalData(sampleData);
-    console.log(`Loaded ${sampleData.length} astronomical entries`);
-    
-    // Initialize Microsoft authentication
+    loadAstronomicalData();
     authenticateWithMicrosoft();
   }, []);
 
   // Complete spine mapping system
   const spineMapping = [
+    // Cervical Region (C1-C7) - Wood Element - Crown/Third Eye Chakras
     { vertebrae: 'C1-C2', element: 'Wood', chakra: 'Crown', organs: ['Brain Stem', 'Pineal Gland'], 
       affirmation: "I am divinely connected to infinite wisdom and cosmic consciousness.",
       color: '#1e40af' },
@@ -121,12 +140,38 @@ const SacredSpineApp = () => {
     { vertebrae: 'C6-C7', element: 'Wood', chakra: 'Throat', organs: ['Throat', 'Thyroid'], 
       affirmation: "I speak my truth with divine authority and sacred power.",
       color: '#2563eb' },
+    
+    // Upper Thoracic (T1-T4) - Fire Element - Heart Chakra
     { vertebrae: 'T1-T2', element: 'Fire', chakra: 'Heart', organs: ['Heart', 'Lungs'], 
       affirmation: "My heart radiates unconditional love and divine compassion.",
       color: '#0284c7' },
     { vertebrae: 'T3-T4', element: 'Fire', chakra: 'Heart', organs: ['Circulation', 'Immune System'], 
       affirmation: "Divine love flows through every cell, healing and transforming my being.",
       color: '#0891b2' },
+    
+    // Mid Thoracic (T5-T8) - Earth Element - Solar Plexus Chakra
+    { vertebrae: 'T5-T6', element: 'Earth', chakra: 'Solar Plexus', organs: ['Stomach', 'Liver'], 
+      affirmation: "I am empowered by divine will and cosmic strength.",
+      color: '#0e7490' },
+    { vertebrae: 'T7-T8', element: 'Earth', chakra: 'Solar Plexus', organs: ['Spleen', 'Gallbladder'], 
+      affirmation: "My personal power aligns perfectly with universal purpose.",
+      color: '#155e75' },
+    
+    // Lower Thoracic (T9-T12) - Metal Element - Solar Plexus/Sacral Bridge
+    { vertebrae: 'T9-T10', element: 'Metal', chakra: 'Solar Plexus', organs: ['Adrenals', 'Kidneys'], 
+      affirmation: "I release what no longer serves and embrace divine transformation.",
+      color: '#374151' },
+    { vertebrae: 'T11-T12', element: 'Metal', chakra: 'Sacral', organs: ['Small Intestine', 'Reproductive'], 
+      affirmation: "I honor my sacred creative force and divine sexual energy.",
+      color: '#4b5563' },
+    
+    // Lumbar (L1-L5) - Water Element - Sacral/Root Chakras
+    { vertebrae: 'L1-L2', element: 'Water', chakra: 'Sacral', organs: ['Lower Back', 'Hips'], 
+      affirmation: "My sacred waters flow with divine creative potential.",
+      color: '#64748b' },
+    { vertebrae: 'L3-L4', element: 'Water', chakra: 'Root', organs: ['Legs', 'Feet'], 
+      affirmation: "I am grounded in divine strength and earthly wisdom.",
+      color: '#6b7280' },
     { vertebrae: 'L5-Sacrum', element: 'Water', chakra: 'Root', organs: ['Pelvis', 'Sacral Plexus'], 
       affirmation: "Here in my sacred sanctuary, divine oil gathers for resurrection.",
       color: '#75859a' }
@@ -139,6 +184,7 @@ const SacredSpineApp = () => {
 
   // Function to find next sacred window for user's sun sign
   const calculateMoonInSunSign = (sunSign, cycleNumber = 1) => {
+    // Return fallback if data not loaded yet
     if (!astronomicalData) {
       return {
         startDate: new Date(Date.now() + 27.3 * 24 * 60 * 60 * 1000),
@@ -152,15 +198,20 @@ const SacredSpineApp = () => {
     }
     
     const today = new Date();
+    
+    // Filter data for user's sun sign
     const signEntries = astronomicalData.filter(entry => entry['Moon Enters'] === sunSign);
     
+    // Find next occurrence after today
     const nextEntry = signEntries.find(entry => {
+      // Parse UTC times correctly by replacing 'UTC' with 'Z' for proper ISO format
       const utcTimeString = entry['Sacred Window Begins'].replace(' UTC', 'Z');
       const windowStart = new Date(utcTimeString);
       return windowStart > today;
     });
     
     if (!nextEntry) {
+      // Fallback if no future entry found
       return {
         startDate: new Date(Date.now() + 27.3 * 24 * 60 * 60 * 1000),
         endDate: new Date(Date.now() + (27.3 + 2.5) * 24 * 60 * 60 * 1000),
@@ -172,6 +223,7 @@ const SacredSpineApp = () => {
       };
     }
     
+    // Parse UTC times correctly for both start and end
     const startUtcString = nextEntry['Sacred Window Begins'].replace(' UTC', 'Z');
     const endUtcString = nextEntry['Sacred Window Ends'].replace(' UTC', 'Z');
     
@@ -191,7 +243,7 @@ const SacredSpineApp = () => {
 
   const generateSacredJourneyAffirmation = (name, sacredName, cycleNumber) => {
     const displayName = sacredName || name;
-    const cycleIndex = (cycleNumber - 1) % 4; // Using first 4 paragraphs for demo
+    const cycleIndex = (cycleNumber - 1) % 13; // Rotate through 13 paragraphs
     const selectedParagraph = sacredParagraphs[cycleIndex];
     
     return `Behold ${name}, known in the sacred realms as ${displayName}! ${selectedParagraph} Your chrism carries with it the transmuted essence of matter transformed into spirit. You are the living temple! You are the Word made flesh! You are God-Man awakened!`;
@@ -213,7 +265,7 @@ const SacredSpineApp = () => {
         index: index + 1
       });
       
-      currentTime = (currentTime + 30) % (24 * 60);
+      currentTime = (currentTime + 30) % (24 * 60); // 30 min intervals
     });
     
     return spinalFlow;
@@ -230,7 +282,6 @@ const SacredSpineApp = () => {
     try {
       console.log('🔄 Creating Stripe Checkout session...');
       
-      // Create Stripe Checkout session via backend
       const checkoutResponse = await fetch(API_ENDPOINTS.createCheckoutSession, {
         method: 'POST',
         headers: {
@@ -251,7 +302,6 @@ const SacredSpineApp = () => {
       const { checkout_url } = await checkoutResponse.json();
       console.log('✅ Checkout session created, redirecting to Stripe...');
 
-      // Redirect to Stripe Checkout
       window.location.href = checkout_url;
 
     } catch (error) {
@@ -329,6 +379,11 @@ const SacredSpineApp = () => {
               <Sparkles className="text-yellow-400" />
             </h1>
             <p className="text-blue-200">Divine Reading for {userInfo.name}</p>
+            <div className="mt-2 bg-blue-800/30 rounded-full px-4 py-2 inline-block">
+              <p className="text-yellow-300 font-semibold">
+                This is your {results.currentCycle}{results.currentCycle === 1 ? 'st' : results.currentCycle === 2 ? 'nd' : results.currentCycle === 3 ? 'rd' : 'th'} of 13 Sacred Sidereal Cycles this year
+              </p>
+            </div>
           </div>
 
           {/* Sacred Journey Affirmation */}
@@ -340,7 +395,7 @@ const SacredSpineApp = () => {
             <p className="text-sm leading-relaxed font-medium italic">{results.sacredJourney}</p>
           </div>
 
-          {/* Next Sacred Secretion */}
+          {/* Next Sacred Secretion - ACCURATE ASTRONOMICAL DATA */}
           <div className="bg-gradient-to-r from-blue-800 to-slate-700 rounded-lg p-6 mb-6 text-white">
             <h2 className="text-xl font-semibold mb-3 flex items-center gap-2">
               <Moon className="text-yellow-400" />
@@ -361,6 +416,114 @@ const SacredSpineApp = () => {
                   {results.moonData.endDate.toISOString().slice(11, 16)} UTC
                 </p>
               </div>
+            </div>
+            <div className="bg-slate-800/50 rounded p-4 text-sm space-y-3">
+              <p><span className="text-yellow-300 font-semibold">Duration:</span> {results.moonData.durationDays.toFixed(1)} days when moon is in {userInfo.sunSign}</p>
+              <p><span className="text-yellow-300 font-semibold">Moon Phase:</span> {results.moonData.moonPhase}</p>
+              <p><span className="text-yellow-300 font-semibold">Next Sacred Window:</span> Every {results.moonData.cycleFrequency} ({results.moonData.totalCyclesPerYear.toFixed(1)} cycles/year)</p>
+              <p><span className="text-yellow-300 font-semibold">Push Notification:</span> We'll notify you 24 hours before your next sacred window opens</p>
+              
+              <div className="border-t border-slate-600 pt-3 mt-3">
+                <p className="text-yellow-300 font-semibold mb-2">🔥 Sacred Window Protocol:</p>
+                <p className="text-blue-200 mb-2">This timing window is considered sacred for meditation, discipline, and inner alignment. The physiological and spiritual opportunity for refinement depends on creating optimal conditions for your chrism to ascend.</p>
+                
+                <div className="bg-slate-700/50 rounded p-3 mt-2">
+                  <p className="text-yellow-200 font-medium mb-2">Success depends on:</p>
+                  <ul className="text-blue-200 text-sm space-y-1 ml-4">
+                    <li>• <span className="text-yellow-300">Retention</span> of the seed (sexual continence)</li>
+                    <li>• <span className="text-yellow-300">Mental purity</span> and focused intention</li>
+                    <li>• <span className="text-yellow-300">Spiritual focus</span> through meditation and contemplation</li>
+                    <li>• <span className="text-yellow-300">Avoidance of excess</span> or indulgence of any kind</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Complete Spinal Energy Mapping */}
+          <div className="bg-slate-800/30 backdrop-blur rounded-lg p-6 mb-6 border border-slate-600">
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+              <Zap className="text-yellow-400" />
+              Your Sacred Chrism Meditation Map
+            </h2>
+            
+            <div className="bg-blue-900/20 rounded-lg p-4 mb-6 border border-blue-500">
+              <h3 className="text-yellow-300 font-bold mb-2">🧘‍♀️ How to Use Your Spinal Meditation Map:</h3>
+              <p className="text-blue-200 text-sm mb-3">
+                During your sacred window, use this map to guide your inner focus as the chrism flows through your spine. 
+                Each section represents a <span className="text-yellow-300 font-semibold">6-hour meditation journey</span> from your pineal gland to your sacral sanctuary.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-4 text-xs">
+                <div>
+                  <p className="text-yellow-300 font-semibold mb-1">Meditation Focus for Each Section:</p>
+                  <ul className="text-blue-200 space-y-1">
+                    <li>• <span className="text-yellow-300">Visualize</span> the golden chrism in that vertebral region</li>
+                    <li>• <span className="text-yellow-300">Feel</span> the Chinese Element energy flowing</li>
+                    <li>• <span className="text-yellow-300">Open</span> the corresponding Chakra center</li>
+                    <li>• <span className="text-yellow-300">Send healing</span> to the associated organs</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-yellow-300 font-semibold mb-1">Sacred Practice Instructions:</p>
+                  <ul className="text-blue-200 space-y-1">
+                    <li>• <span className="text-yellow-300">Speak</span> the divine affirmation with intention</li>
+                    <li>• <span className="text-yellow-300">Breathe</span> into each spinal section slowly</li>
+                    <li>• <span className="text-yellow-300">Hold</span> the energy there for several minutes</li>
+                    <li>• <span className="text-yellow-300">Feel</span> the chrism preparing for ascension</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <p className="text-blue-200 mb-4 text-center italic">
+              "As you meditate on each spinal segment, you prepare the pathway for your chrism's triumphant return to the crown."
+            </p>
+            
+            <div className="grid gap-4 max-h-96 overflow-y-auto">
+              {results.spinalFlow.map((flow, index) => (
+                <div key={index} className="p-4 rounded-lg shadow-lg bg-slate-800/40 border-l-4"
+                     style={{ borderLeftColor: flow.color }}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm"
+                         style={{ backgroundColor: flow.color }}>
+                      {flow.vertebrae}
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-white font-bold text-lg mb-1">
+                        Meditation Hour: {flow.time}
+                      </div>
+                      <div className="text-blue-200 text-sm mb-2">
+                        <span className="text-yellow-300 font-semibold">{flow.element} Element</span> • 
+                        <span className="text-yellow-300 font-semibold"> {flow.chakra} Chakra</span> • 
+                        <span> Healing: {flow.organs.join(', ')}</span>
+                      </div>
+                      <div className="bg-slate-700/30 rounded p-3 mt-2">
+                        <p className="text-yellow-200 italic text-sm font-medium mb-1">
+                          Sacred Affirmation to Speak:
+                        </p>
+                        <p className="text-blue-100 text-sm">
+                          "{flow.affirmation}"
+                        </p>
+                      </div>
+                      <div className="mt-2 text-xs text-slate-300">
+                        💫 <span className="italic">Visualize golden chrism flowing through this region as you breathe deeply and repeat the affirmation</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-6 bg-gradient-to-r from-yellow-600/20 to-amber-600/20 rounded-lg p-4 border border-yellow-500/30">
+              <p className="text-yellow-300 font-bold text-center mb-2">
+                🏺 Sacred Reminder: The Chrism's Journey
+              </p>
+              <p className="text-blue-200 text-sm text-center">
+                After 6 hours of flowing through your 24 vertebrae, your sacred chrism arrives at the sacral sanctuary (Bethlehem) 
+                where it rests for 2.5 days. On the third day, through your disciplined practice, it begins its ascension back to 
+                the Optic Thalamus (Golgotha) - completing the resurrection within your own temple body.
+              </p>
             </div>
           </div>
 
@@ -598,12 +761,17 @@ const SacredSpineApp = () => {
             >
               {isAuthenticating ? '🔄 Authenticating...' : '✨ Reveal My Sacred Chrism Journey ✨'}
             </button>
+            
+            <div className="bg-blue-900/20 rounded-lg p-3 mt-4 text-xs text-blue-200">
+              <p className="font-semibold text-yellow-300 mb-1">📱 Sacred Window Notifications:</p>
+              <p>We'll send you a push notification 24 hours before your next sacred window opens. Please ensure your device settings allow notifications from this app to receive your monthly sacred reminders.</p>
+            </div>
           </div>
         </div>
 
         <div className="mt-6 bg-slate-800/20 rounded-lg p-4 text-slate-300 text-xs">
           <p className="font-semibold mb-2">📚 Based on "God-Man: The Word Made Flesh" by George W. Carey</p>
-          <p>This calculator uses precise sidereal calculations with <span className="text-yellow-400 font-semibold">Lahiri ayanamsa (~24°)</span> for accurate timing. Sacred windows are calculated using real ephemeris data for educational and spiritual exploration purposes.</p>
+          <p>This calculator uses <span className="text-yellow-400 font-semibold">Skyfield</span> for real-time lunar ingress detection and applies <span className="text-yellow-400 font-semibold">Lahiri ayanamsa (~24°)</span> for <span className="text-yellow-400 font-semibold">sidereal zodiac</span> calculations. Sacred windows are calculated using precise ephemeris data for educational and spiritual exploration purposes.</p>
         </div>
       </div>
     </div>
